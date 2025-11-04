@@ -1,0 +1,28 @@
+🎯 1.a – Identifying Entities
+
+These are the main objects or concepts that store data:
+•	CricketBoard
+•	Team
+•	Player
+•	Match
+•	Ground
+•	Umpire
+
+1.b – Identifying Attributes
+
+Here are attributes for each entity (primary key underlined):
+•	CricketBoard(BoardID, Name, Address, Contact_No)
+•	Team(TeamID, Name, Coach, Captain)
+•	Player(PlayerID, FName, LName, Age, DateofBirth, PlayingRole)
+•	Match(MatchID, Date, Time, Result)
+•	Ground(GroundID, Name, Location, Capacity)
+•	Umpire(UmpireID, FName, LName, Age, DateofBirth, Country)
+
+1.c – Relationships, Cardinality, and Type
+
+Relationship	Entities Involved	Cardinality	Type
+Board-Manages-Team	CricketBoard – Team	1 : M (One board manages many teams)	1 to Many
+Team-Has-Player	Team – Player	1 : M (One team has many players)	1 to Many
+Match-Includes-Team	Match – Team	M : M (Matches involve multiple teams)	Many to Many
+Match-IsHeldAt	Match – Ground	M : 1 (Many matches can be held at one ground)	Many to One
+Match-Has-Umpire	Match – Umpire	M : M (Each match has multiple umpires, and an umpire can officiate many matches)	Many to Many
